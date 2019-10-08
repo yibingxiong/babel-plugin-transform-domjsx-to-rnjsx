@@ -1,0 +1,21 @@
+{
+  "name": "babel-plugin-transform-domjsx-to-rnjsx",
+  "version": "1.0.0",
+  "description": "a babel plugin of transform dom jsx to reactnative jsx",
+  "main": "index.js",
+  "repository": "git@github.com:yibingxiong/babel-plugin-transform-domjsx-to-rnjsx.git",
+  "author": "<yibingxiong@126.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-tester": "^7.0.1",
+    "jest": "^24.9.0"
+  }
+}
