@@ -10,11 +10,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "babel-traverse": "^6.26.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/types": "^7.6.3",
+    "babel-jest": "^24.9.0",
     "babylon": "^6.18.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
     "babel-plugin-tester": "^7.0.1",
     "jest": "^24.9.0"
   }
