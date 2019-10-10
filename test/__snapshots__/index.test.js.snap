@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works 1`] = `
+"function b() {
+  console.log(1);
+}
+
+function A() {
+  return <View View={b}>
+            <View>
+                {[1, 2, 3, 4].map(item => {
+        return <View>item</View>;
+      })}
+            </View>
+        </View>;
+}"
+`;

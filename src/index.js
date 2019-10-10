@@ -18,9 +18,11 @@ module.exports = function identifierReversePlugin() {
 
 
     const visitor = {
-        Identifier(path, state) {},
+        Identifier(path, state) {
+        },
         JSXIdentifier(path) {
             if (t.isJSXIdentifier(path.node)) {
+                console.log(path.node.name)
                 path.node.name = 'View';
             }
         }
