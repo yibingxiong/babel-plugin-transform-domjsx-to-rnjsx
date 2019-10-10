@@ -4,13 +4,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 function _pluginSyntaxJsx() {
-  const data = _interopRequireDefault(require("@babel/plugin-syntax-jsx"));
+    const data = _interopRequireDefault(require("@babel/plugin-syntax-jsx"));
 
-  _pluginSyntaxJsx = function () {
+    _pluginSyntaxJsx = function () {
+        return data;
+    };
+
     return data;
-  };
-
-  return data;
 }
 
 
@@ -20,10 +20,14 @@ module.exports = function identifierReversePlugin() {
     const visitor = {
         Identifier(path, state) {
         },
-        JSXIdentifier(path) {
-            if (t.isJSXIdentifier(path.node)) {
-                console.log(path.node.name)
-                path.node.name = 'View';
+        JSXOpeningElement(path) {
+            if(t.isJSXIdentifier(path.get('name'))) {
+                path.get('name').node.name = "View";
+            }
+        },
+        JSXClosingElement(path) {
+            if(t.isJSXIdentifier(path.get('name'))) {
+                path.get('name').node.name = "View";
             }
         }
     }

@@ -1,7 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`works 1`] = `
-"function b() {
+function b() {
   console.log(1);
 }
 
@@ -13,5 +10,4 @@ function A() {
       })}
             </View>
         </View>;
-}"
-`;
+}
