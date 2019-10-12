@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "test2": "jest -u"
+    "test2": "jest -u",
+    "generate": "node test/generate.js"
   },
   "dependencies": {
     "@babel/core": "^7.6.0",

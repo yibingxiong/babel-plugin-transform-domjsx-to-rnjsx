@@ -13,23 +13,35 @@ function _pluginSyntaxJsx() {
     return data;
 }
 
+const classNameAttributeKey = 'className';
 
 module.exports = function identifierReversePlugin() {
-
-
     const visitor = {
         Identifier(path, state) {
         },
         JSXOpeningElement(path) {
-            if(t.isJSXIdentifier(path.get('name'))) {
+            if (t.isJSXIdentifier(path.get('name'))) {
+                path.get('name').node.name = "View";
+            }
+
+            path.get('attributes').forEach(attribute => {
+                const attributeKey = attribute.node.name;
+                const attributeValue = attribute.node.value;
+
+                if (attributeKey) {
+                    let name = attributeKey.name;
+                    if (name === classNameAttributeKey) {
+                        attribute.replaceWith(t.jsxAttribute(t.jsxIdentifier("style"), t.jsxExpressionContainer(t.memberExpression(t.identifier("styles"), t.identifier(attributeValue.value)))));
+
+                    }
+                }
+            })
+        },
+        JSXClosingElement(path) {
+            if (t.isJSXIdentifier(path.get('name'))) {
                 path.get('name').node.name = "View";
             }
         },
-        JSXClosingElement(path) {
-            if(t.isJSXIdentifier(path.get('name'))) {
-                path.get('name').node.name = "View";
-            }
-        }
     }
 
     return {

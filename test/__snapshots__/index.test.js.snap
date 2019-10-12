@@ -6,7 +6,7 @@ exports[`works 1`] = `
 }
 
 function A() {
-  return <View onClick={b}>
+  return <View onClick={b} style={styles.classNameValue}>
             <View>
                 {[1, 2, 3, 4].map(item => {
         return <View>item</View>;

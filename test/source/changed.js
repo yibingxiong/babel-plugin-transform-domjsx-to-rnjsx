@@ -5,7 +5,7 @@ function b() {
 
 function A() {
     return (
-        <div onClick={b} className="classNameValue">
+        <div onClick={b}>
             <ul>
                 {
                     [1,2,3,4].map((item) => {
