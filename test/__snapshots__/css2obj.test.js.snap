@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`css2objtest 1`] = `
+".className {
+	background-color: red;
+}
+.className2 {
+    margin: 10px 20px;
+}
+"
+`;

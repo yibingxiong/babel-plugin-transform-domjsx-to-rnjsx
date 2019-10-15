@@ -16,7 +16,10 @@
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/types": "^7.6.3",
     "babel-jest": "^24.9.0",
-    "babylon": "^6.18.0"
+    "babel-plugin-css-to-js": "0.0.4",
+    "babylon": "^6.18.0",
+    "camelcase": "^5.3.1",
+    "postcss": "^7.0.18"
   },
   "devDependencies": {
     "babel-plugin-tester": "^7.0.1",
